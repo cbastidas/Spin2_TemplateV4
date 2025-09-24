@@ -336,6 +336,23 @@
         }
         }
 
+        @media (min-width: 300px){
+            #consent-content {
+                background-color: #28b65e;
+                padding: 30px;
+                border-radius: 10px;
+                text-align: center;
+                max-width: 400px;
+                width: 80vw;
+                max-height: 80vh;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+                color: white;
+                margin-bottom: 10px;
+                margin-top: 10px;
+
+            }
+        }
+
          /* MEDIA QUERIES FOR MOBILES 
          Devices: iPhone SE 375x667 */
         @media (min-width: 374px) and (max-width: 376px) and (min-height: 667px) and (max-height: 668px) {
@@ -365,6 +382,21 @@
             #container {
                 width: 100%;
                 min-height: 60vh;
+            }
+
+            #consent-content {
+                background-color: #28b65e;
+                padding: 30px;
+                border-radius: 10px;
+                text-align: center;
+                max-width: 400px;
+                width: 80vw;
+                max-height: 80vh;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+                color: white;
+                margin-bottom: 10px;
+                margin-top: 10px;
+
             }
         }
 
@@ -402,6 +434,21 @@
             #container {
                 width: 100%;
                 min-height: 60vh;
+            }
+
+            #consent-content {
+                background-color: #28b65e;
+                padding: 30px;
+                border-radius: 10px;
+                text-align: center;
+                max-width: 400px;
+                width: 80vw;
+                max-height: 80vh;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+                color: white;
+                margin-bottom: 10px;
+                margin-top: 10px;
+
             }
         }
 
@@ -459,6 +506,67 @@
                 animation: fadeIn 1s ease-in-out;
                 pointer-events: none;
             }
+        }
+
+        /*MEDIA QUERIES FOR 1920x1200px*/
+        @media (min-width: 1900px) {
+            #popup {
+                width: 500px;
+                height: 440px;
+                background-size: 100% 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-color: transparent;
+                padding: 0;
+            }
+
+            #pointer {
+                top: -11%;
+            }
+
+            #container {
+                position: relative;
+                width: 100%;
+                min-height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                flex-direction: column;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url('assets/bg.png');
+            }
+
+            #wheel-area {
+                position: absolute;
+                max-width: 700px;
+                max-height: 700px;
+                width: 90%;
+                height: 100%;
+                top: 63%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 5;
+            }
+
+            #header-text {
+                position: absolute;
+                top: 30px;
+                left: 510px;
+                width: 100%;
+                max-width: 900px;
+                height: 100%; /* Adjust based on asset's aspect ratio */
+                max-height: 220px;
+                z-index: 999;
+                background-image: url('assets/header.png');
+                background-size: 70%;
+                background-repeat: no-repeat;
+                background-position: center;
+                animation: fadeIn 1s ease-in-out;
+                pointer-events: none;
+            }
+            
         }
 
         /*
@@ -735,17 +843,65 @@
             }
         }
 
+        /*MEDIA QUERIES FOR iPhone 15Pro Max 430x932 */
+        @media (min-width: 400px) and (max-width: 440px) and (min-height: 931px) and (max-height: 933px) {
+            #popup {
+                width: 300px;
+                height: 240px;
+            }
+
+            #pointer {
+                top: 2%;
+            }
+
+            #wheel-area {
+                position: absolute;
+                width: 90vw;
+                height: 83%;
+                top: 70%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 5;
+            }
+
+            #header-text {
+                top: -24%;
+                left: auto;
+                width: 100vw;
+                height: 100vw; 
+            }
+
+            #container {
+                width: 100%;
+                min-height: 63vh;
+            }
+
+            #consent-content {
+                background-color: #28b65e;
+                padding: 30px;
+                border-radius: 10px;
+                text-align: center;
+                max-width: 400px;
+                width: 80vw;
+                max-height: 80vh;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+                color: white;
+                margin-bottom: 10px;
+                margin-top: 10px;
+
+            }
+        }
+
         /* Cookie Consent */
         #consent-popup {
             position: fixed;
-            top: 0;
+            bottom: 0;
             left: 0;
             width: 100%;
-            height: 100%;
             background-color: rgba(0, 0, 0, 0.7);
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-end;
             z-index: 99999;
         }
 
@@ -757,6 +913,8 @@
             max-width: 400px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
             color: white;
+            margin-bottom: 10px;
+            margin-top: 10px;
         }
 
         .consent-buttons button {
